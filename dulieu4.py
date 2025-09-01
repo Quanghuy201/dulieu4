@@ -76,7 +76,7 @@ class Bot(ZaloAPI):
                     response = random.choice(remaining_responses)
                     remaining_responses.remove(response)
                     message_to_send = response.replace("{user}", user)
-                    self.send(
+                    self.sendMessage(
                         Message(text=message_to_send),
                         thread_id=thread_id,
                         thread_type=ThreadType.GROUP
